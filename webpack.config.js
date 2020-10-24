@@ -2,8 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const DotenvWebpack = require('dotenv-webpack')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const VueTemplateCompiler = require('vue-template-compiler')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   entry: {
@@ -63,7 +62,6 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist/public'),
     compress: false,
     port: 4080,
-    open: 'Google Chrome',
     writeToDisk: true,
     historyApiFallback: true,
   },
